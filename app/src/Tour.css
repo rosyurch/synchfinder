@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: #282c34;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    border: 1px orange solid;
+    border-radius: 10px;
+    margin: 1em auto;
+    max-width: 80%;
+    min-width: 340px;
+}
+
+li span {
+    font-size: 0.8em;
+}
+
+li h3 {
+    margin: 5px 5px 0px 5px;
+    padding: 5px 5px 0px 5px;
+}
+
+li a {
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 7px;
+    font-size: 1.2em;
+    color: #4ebce8;
+}
+
+.checkboxes {
+    width: 155px;
+    margin: 0 auto;
+    text-align: start;
+}
