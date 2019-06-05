@@ -17,6 +17,7 @@ function AllTourn(props) {
             }
         }).catch(err => console.error(err));
         let data = await response.json();
+        //console.log(data);
         let items = data.items;
         setTourn(items);
     }
@@ -57,15 +58,17 @@ function AllTourn(props) {
         <>
             <form>
                 <label htmlFor="search">Название: </label>
-                <input type="text" name="search" value={query} onChange={changeHandle} />
+                <input type="text" name="search" value={query} onChange={changeHandle} className="search-input" />
                 <div className="checkboxes">
                     <input type='checkbox' name='showType' id='sync' value="sync" onChange={handleSync} checked={showSyncOnly} />
                     <label htmlFor="sync">Только синхроны</label>
                 </div>
-                <label htmlFor="from_date" >От: </label>
-                <input type="date" name="from_date" onChange={fromHandler} />
-                <label htmlFor="to_date" >До: </label>
-                <input type="date" name="to_date" onChange={toHandler} />
+                <div className="date-input">
+                    <label htmlFor="from_date" >От: </label>
+                    <input type="date" name="from_date" onChange={fromHandler} />
+                    <label htmlFor="to_date" > До: </label>
+                    <input type="date" name="to_date" onChange={toHandler} />
+                </div>    
             </form>
             <ul>
                 {tourn
@@ -93,6 +96,7 @@ function AllTourn(props) {
                     );
                 })}
             </ul>
+            
         </>
     )
 }
